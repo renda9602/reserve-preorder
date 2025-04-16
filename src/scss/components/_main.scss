@@ -1,0 +1,321 @@
+@use '../base/base';
+@use '../base/theme';
+
+//메인
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 1920px;
+}
+
+:root {
+    /**
+     * ---------------------------------------------------------------------
+     * SPACING VARIABLES
+     *
+     * We are using a spacing inspired from frameworks like Tailwind CSS.
+     * ---------------------------------------------------------------------
+     */
+    --spacing-0-5: 0.125rem; /* 2px */
+    --spacing-1: 0.25rem; /* 4px */
+    --spacing-1-5: 0.375rem; /* 6px */
+    --spacing-2: 0.5rem; /* 8px */
+    --spacing-2-5: 0.625rem; /* 10px */
+    --spacing-3: 0.75rem; /* 12px */
+    --spacing-3-5: 0.875rem; /* 14px */
+    --spacing-4: 1rem; /* 16px */
+    --spacing-4-5: 1.125rem; /* 18px */
+    --spacing-5: 1.25rem; /* 20px */
+    --spacing-5-5: 1.375rem; /* 22px */
+    --spacing-6: 1.5rem; /* 24px */
+    --spacing-6-5: 1.625rem; /* 26px */
+    --spacing-7: 1.75rem; /* 28px */
+    --spacing-7-5: 1.875rem; /* 30px */
+    --spacing-8: 2rem; /* 32px */
+    --spacing-8-5: 2.125rem; /* 34px */
+    --spacing-9: 2.25rem; /* 36px */
+    --spacing-9-5: 2.375rem; /* 38px */
+    --spacing-10: 2.5rem; /* 40px */
+    --spacing-11: 2.75rem; /* 44px */
+    --spacing-12: 3rem; /* 48px */
+    --spacing-13: 3.125rem; /* 50px */
+    --spacing-14: 3.5rem; /* 56px */
+    --spacing-16: 4rem; /* 64px */
+    --spacing-18: 4.5rem; /* 72px */
+    --spacing-20: 5rem; /* 80px */
+    --spacing-24: 6rem; /* 96px */
+    --spacing-25: 6.25rem; /* 96px */
+    --spacing-28: 7rem; /* 112px */
+    --spacing-32: 8rem; /* 128px */
+    --spacing-36: 9rem; /* 144px */
+    --spacing-40: 10rem; /* 160px */
+    --spacing-44: 11rem; /* 176px */
+    --spacing-48: 12rem; /* 192px */
+    --spacing-52: 13rem; /* 208px */
+    --spacing-56: 14rem; /* 224px */
+    --spacing-60: 15rem; /* 240px */
+    --spacing-64: 16rem; /* 256px */
+    --spacing-72: 18rem; /* 288px */
+    --spacing-80: 20rem; /* 320px */
+    --spacing-96: 24rem; /* 384px */
+
+    /* Container */
+    --container-max-width: 1600px;
+    --container-narrow-max-width: 1350px;
+    --container-gutter: var(--spacing-5);
+    --section-outer-spacing-block: var(--spacing-13);
+    --section-inner-max-spacing-block: var(--spacing-12);
+    --section-inner-spacing-inline: var(--container-gutter);
+    --section-stack-spacing-block: var(--spacing-10);
+
+    /* Grid gutter */
+    --grid-gutter: var(--spacing-5);
+
+    /* Product list settings */
+    --product-list-row-gap: var(--spacing-8);
+    --product-list-column-gap: var(--grid-gutter);
+
+    /* Form settings */
+    --input-gap: var(--spacing-2);
+    --input-height: 1.875rem;
+    --input-quantity: 3.125rem;
+    --input-padding-inline: var(--spacing-4);
+
+    /* Other sizes */
+    --sticky-area-height: calc(
+        var(--sticky-announcement-bar-enabled, 0) *
+            var(--announcement-bar-height, 0px) +
+            var(--sticky-header-enabled, 0) * var(--header-height, 0px)
+    );
+
+    /* RTL support */
+    --transform-logical-flip: 1;
+    --transform-origin-start: left;
+    --transform-origin-end: right;
+
+    /**
+     * ---------------------------------------------------------------------
+     * TYPOGRAPHY
+     * ---------------------------------------------------------------------
+     */
+
+    /* Font properties */
+    --heading-font-family: Poppins, sans-serif;
+    --heading-font-weight: 400;
+    --heading-font-style: normal;
+    --heading-text-transform: normal;
+    --heading-letter-spacing: -0.02em;
+    --text-font-family: Poppins, sans-serif;
+    --text-font-weight: 500;
+    --text-font-style: normal;
+    --text-letter-spacing: 0em;
+
+    /* Font sizes */
+    --text-h0: 3rem;
+    --text-h1: 2.5rem;
+    --text-h2: 2rem;
+    --text-h3: 1.5rem;
+    --text-h4: 1.375rem;
+    --text-h5: 1.125rem;
+    --text-h6: 1rem;
+    --text-h7: 0.875rem;
+    --text-h8: 0.875rem;
+    --text-xs: 0.6875rem;
+    --text-sm: 0.75rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.125rem;
+
+    /**
+     * ---------------------------------------------------------------------
+     * COLORS
+     * ---------------------------------------------------------------------
+     */
+
+    /* Color settings */
+    --accent: 26 26 26;
+    --text-primary: 36 33 30;
+    --background-primary: 249 249 249;
+    --dialog-background: 255 255 255;
+    --border-color: var(--text-color, var(--text-primary)) / 0.12;
+
+    /* Button colors */
+    --button-background-primary: 26 26 26;
+    --button-text-primary: 255 255 255;
+    --button-background-secondary: 240 196 23;
+    --button-text-secondary: 26 26 26;
+
+    /* Status colors */
+    --success-background: 224 244 232;
+    --success-text: 0 163 65;
+    --warning-background: 247 242 235;
+    --warning-text: 188 147 91;
+    --error-background: 254 231 231;
+    --error-text: 248 58 58;
+
+    /* Product colors */
+    --on-sale-text: 199 32 32;
+    --on-sale-badge-background: 199 32 32;
+    --on-sale-badge-text: 255 255 255;
+    --sold-out-badge-background: 0 0 0;
+    --sold-out-badge-text: 255 255 255;
+    --primary-badge-background: 166 107 37;
+    --primary-badge-text: 255 255 255;
+    --star-color: 235 150 61;
+    --product-card-background: 0 0 0;
+    --product-card-text: 26 26 26;
+
+    /* Header colors */
+    --header-background: 255 255 255;
+    --header-text: 255 255 255;
+
+    /* Footer colors */
+    --footer-background: 166 107 37;
+    --footer-text: 255 255 255;
+
+    /* Rounded variables (used for border radius) */
+    --rounded-00: 0rem;
+    --rounded-xs: 0.25rem;
+    --rounded-sm: 0.15625rem;
+    --rounded: 0.3125rem;
+    --rounded-lg: 0.625rem;
+    --rounded-full: 9999px;
+
+    --rounded-button: 1.875rem;
+    --rounded-input: 0.5rem;
+
+    /* Box shadow */
+    --shadow-sm: 0 2px 8px rgb(var(--text-primary) / 0.1);
+    --shadow: 0 5px 15px rgb(var(--text-primary) / 0.1);
+    --shadow-md: 0 5px 30px rgb(var(--text-primary) / 0.1);
+    --shadow-block: 0px 18px 50px rgb(var(--text-primary) / 0.1);
+
+    /**
+     * ---------------------------------------------------------------------
+     * OTHER
+     * ---------------------------------------------------------------------
+     */
+
+    --cursor-close-svg-url: url(//bodyfriend.com/cdn/shop/t/14/assets/cursor-close.svg?v=147174565022153725511735867795);
+    --cursor-zoom-in-svg-url: url(//bodyfriend.com/cdn/shop/t/14/assets/cursor-zoom-in.svg?v=154953035094101115921735867795);
+    --cursor-zoom-out-svg-url: url(//bodyfriend.com/cdn/shop/t/14/assets/cursor-zoom-out.svg?v=16155520337305705181735867795);
+    --checkmark-svg-url: url(//bodyfriend.com/cdn/shop/t/14/assets/checkmark.svg?v=77552481021870063511735867795);
+}
+
+[dir='rtl']:root {
+    /* RTL support */
+    --transform-logical-flip: -1;
+    --transform-origin-start: right;
+    --transform-origin-end: left;
+}
+
+@media screen and (min-width: 700px) {
+    :root {
+        /* Typography (font size) */
+        --text-h0: 4rem;
+        --text-h1: 3rem;
+        --text-h2: 2.5rem;
+        --text-h3: 2rem;
+        --text-h4: 1.625rem;
+        --text-h5: 1.25rem;
+        --text-h6: 1.125rem;
+        --text-h7: 1rem;
+        -text-h8: 0.875rem;
+
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.25rem;
+
+        /* Spacing */
+        --container-gutter: 2rem;
+        --section-outer-spacing-block: var(--spacing-20);
+        --section-inner-max-spacing-block: var(--spacing-14);
+        --section-inner-spacing-inline: var(--spacing-12);
+        --section-stack-spacing-block: var(--spacing-12);
+
+        /* Grid gutter */
+        --grid-gutter: var(--spacing-6);
+
+        /* Product list settings */
+        --product-list-row-gap: var(--spacing-12);
+
+        /* Form settings */
+        --input-gap: 1rem;
+        --input-height: 2.5rem;
+        --input-quantity: 3.75rem;
+        --input-padding-inline: var(--spacing-5);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    :root {
+        /* Spacing settings */
+        --container-gutter: var(--spacing-13);
+        --section-outer-spacing-block: var(--spacing-20);
+        --section-inner-max-spacing-block: var(--spacing-18);
+        --section-inner-spacing-inline: var(--spacing-16);
+        --section-stack-spacing-block: var(--spacing-12);
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    :root {
+        /* Spacing settings */
+        --container-gutter: var(--spacing-13);
+        --section-outer-spacing-block: var(--spacing-24);
+        --section-inner-max-spacing-block: var(--spacing-18);
+        --section-inner-spacing-inline: var(--spacing-16);
+        --section-stack-spacing-block: var(--spacing-13);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    :root {
+        /* Typography (font size) */
+        --text-h0: 5rem;
+        --text-h1: 3.75rem;
+        --text-h2: 3rem;
+        --text-h3: 2.25rem;
+        --text-h4: 2rem;
+        --text-h5: 1.5rem;
+        --text-h6: 1.25rem;
+        --text-h7: 1rem;
+        --text-h8: 0.875rem;
+        --section-outer-spacing-block: var(--spacing-28);
+        --section-inner-max-spacing-block: var(--spacing-20);
+        --section-inner-spacing-inline: var(--spacing-18);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    :root {
+        --section-outer-spacing-block: var(--spacing-25);
+        --section-inner-max-spacing-block: var(--spacing-24);
+        --section-inner-spacing-inline: var(--spacing-20);
+    }
+}
+
+/**
+   * ---------------------------------------------------------------------
+   * LIQUID DEPENDANT CSS
+   *
+   * Our main CSS is Liquid free, but some very specific features depend on
+   * theme settings, so we have them here
+   * ---------------------------------------------------------------------
+   */
+@media screen and (pointer: fine) {
+    .button:not([disabled]):hover,
+    .btn:not([disabled]):hover,
+    .shopify-payment-button__button--unbranded:not([disabled]):hover {
+        --button-background-opacity: 0.85;
+    }
+
+    .button--subdued:not([disabled]):hover {
+        --button-background: var(--text-color) / 0.05 !important;
+    }
+}

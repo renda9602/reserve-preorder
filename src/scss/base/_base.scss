@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
+
+/* Typography (heading) */
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url('//bodyfriend.com/cdn/fonts/poppins/poppins_n4.934accbf9f5987aa89334210e6c1e9151f37d3b6.woff2?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=32288401254d49f5e695afe3a108f6fdca2963b433d9d80bab7744ec259c497f')
+            format('woff2'),
+        url('//bodyfriend.com/cdn/fonts/poppins/poppins_n4.ee28d4489eaf5de9cf6e17e696991b5e9148c716.woff?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=042cd2ea37e776c45ffb8c4246679e90a93a8bbee17eb93285c4a4ae97f11d88')
+            format('woff');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: italic;
+    font-display: fallback;
+    src: url('//bodyfriend.com/cdn/fonts/poppins/poppins_i4.a7e8d886e15d5fb9bc964a53b3278effbf270e9c.woff2?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=f866ca6711d19149f864121ab6e29901c6e483e5a1d33237576229f487eab3e5')
+            format('woff2'),
+        url('//bodyfriend.com/cdn/fonts/poppins/poppins_i4.e87de252199e27825a41bf81646996685d86452d.woff?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=80fa6daa67774c90e4594d02d928e307145569122429e9640064930fbbecf767')
+            format('woff');
+}
+
+/* Typography (body) */
+@font-face {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+    src: url('//bodyfriend.com/cdn/fonts/poppins/poppins_n5.25334cd7ff48c81cfd51a6bc5a81d92a1b4d4501.woff2?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=c6ac3185aeb3bd0887edfba7995abe31aa279080ece72e1b49f435c65f3d3b7f')
+            format('woff2'),
+        url('//bodyfriend.com/cdn/fonts/poppins/poppins_n5.fc8eae64d8f1b5d2b8c42b45ddc0749aff4750a6.woff?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=c50f6783d0906d481196d71366318bcd242936bb44398a30a35193de4824ffc0')
+            format('woff');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: italic;
+    font-display: fallback;
+    src: url('//bodyfriend.com/cdn/fonts/poppins/poppins_i5.7a2d84979134c226101806900bea600c71eeb63d.woff2?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=b6879b70254157e72c6510ba4b4a0e2cd1bb3383715540836d0545caa76466bf')
+            format('woff2'),
+        url('//bodyfriend.com/cdn/fonts/poppins/poppins_i5.8671d7a1ea0c17aae512b84c1f6f06c5ca63dd49.woff?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=768e4891203c341bca253d7a7b8ecc96742504e08d86e90370a5e5a68d4bb5ee')
+            format('woff');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+    src: url('//bodyfriend.com/cdn/fonts/poppins/poppins_n7.58aca33913fc6666cc9e8a53f6b16ec5c3c05a3f.woff2?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=95e9c25a8e30ffa7724fc9710cdf7626f1a49cc9f8010d19440cad1c40cb7592')
+            format('woff2'),
+        url('//bodyfriend.com/cdn/fonts/poppins/poppins_n7.59016f931f3f39434d2e458fba083eb7db7a07d9.woff?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=e39727a97901e7f3bdcc0f75edca16ff8a2f6927c9b3df0203c39b6d76fe5a81')
+            format('woff');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: italic;
+    font-display: fallback;
+    src: url('//bodyfriend.com/cdn/fonts/poppins/poppins_i7.4f85a5d51a1aecf426eea47ac4570ef7341bfdc1.woff2?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=e131ddae0012c1640c348f22ed52625cec564e3bb0d847de4932236b51faa770')
+            format('woff2'),
+        url('//bodyfriend.com/cdn/fonts/poppins/poppins_i7.aff3a08a92d1c136586c611b9fc43d357dfbbefe.woff?h1=d24tYmYuYWNjb3VudC5teXNob3BpZnkuY29t&h2=Ym9keWZyaWVuZC5jb20&hmac=faeb8731a8377287af4961955912a82e2f8fe768126d92e9955f1b1dd4f9046b')
+            format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NotoSansKR-Regular', 'Noto Sans', 'AppleGothicNeoSD',
+        'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans',
+        '맑은 고딕', 'Malgun Gothic', sans-serif !important;
+}
+
+body {
+    font-family: 'Bodyfriend_Sans', 'Noto Sans', 'AppleGothicNeoSD',
+        'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans',
+        '맑은 고딕', 'Malgun Gothic', sans-serif;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+img {
+    vertical-align: top;
+}
+a,
+a:link {
+    text-decoration: none;
+}
+input,
+select,
+textarea,
+button {
+    vertical-align: middle;
+    border-radius: 0;
+    cursor: pointer;
+    /*ios대응*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0;
+}
+textarea:disabled {
+    background: #f0f0f0;
+}
+i,
+em,
+address {
+    font-style: normal;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+legend,
+caption {
+    line-height: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+}

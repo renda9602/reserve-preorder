@@ -1,6 +1,6 @@
 # ShopBodyfriend 컨텐츠 관리 페이지
 
--   [ShopBodyfriend 컨텐츠 관리 페이지](https://github.com/bf-sw/)
+-   [CANTON 733 사전예약 화면 컨텐츠](https://github.com/bf-sw/)
 
 ## 개발 환경
 
@@ -9,10 +9,7 @@
 ## 기능
 
 -   랜딩 페이지 구현
--   상품 목록 페이지 구현
--   상품 상세 페이지 구현
--   모달팝업 구현
--   결제 페이지 구현(여부 확인 필요)
+-   입력 폼 추가
 
 ## 설치 및 실행 방법
 

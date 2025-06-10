@@ -1,4 +1,4 @@
-# ShopBodyfriend 컨텐츠 관리 페이지
+# CANTON 733 사전예약 화면 관리 페이지
 
 -   [CANTON 733 사전예약 화면 컨텐츠](https://github.com/renda9602/reserve-preorder/)
 
